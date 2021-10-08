@@ -9,49 +9,60 @@
     <link rel="stylesheet" href="04-form.css" />
   </head>
   <body>
-    <form>
+    <header>
       <div>
-
-        <br>
-        <br>
-        <legend>INTRO SURVEY</legend>
-        <br>
-        <br>
-        <label for="Name">Name <span>(required)</span></label><br>
-        <input type="text" name="Name" required/>
-        <br>
-        <br>
-        <label for="Email">Email <span>(required)</span></label><br>
-        <input type="email" name="Email" required/>
-        <br>
-        <br>
-        <label for="Registration Status:">Registration Status</label><br>
-        <select name="option">
-          <option value="Choose an Option" name="option" selected="selected">Choose an Option</option>
-          <option value="Registered" name="option" >Registered</option>
-          <option value="Waitlist" name="option">Waitlisted</option>
-        </select>
-        <br>
-        <br>
-        <label for="Class Sections">Class Section:</label><br>
-        <input type="radio" name="CS 410P"/> CS 410P
-        <input type="radio" name="CS 510P"/> CS 510P
-        <br>
-        <br>
-        <label for="Course Selection">Have you taken any of the following courses?</label><br>
-        <input type="checkbox" name="Programming Languages"/> Programming Languages<br>
-        <input type="checkbox" name="Operating Systems"/> Operating Systems<br>
-        <input type="checkbox" name="Full Stack Web Development"/>Full Stack Web Development
-        <br>
-        <br>
-        <label for="Anything else?">Anything else?</label><br>
-        <textarea rows="10" cols="90"></textarea><br>
-        <input type="submit" name="submit" value="Submit">
-        <input type="reset" name="reset" value="Reset">
+        <form>
+          <br>
+          <br>
+          <h1>INTRO SURVEY</h1>
+          <br>
+          <br>
+          <label for="name">Name <span>(required)</span></label><br>
+          <input type="text" id="name" name="Name" required/>
+          <br>
+          <br>
+          <label for="email">Email <span>(required)</span></label><br>
+          <input type="email" id="email" name="Email" required/>
+          <br>
+          <br>
+          <label for="option">Registration Status</label><br>
+          <select name="option" id="option">
+            <option value="Choose an Option" name="option" selected="selected">Choose an Option</option>
+            <option value="Registered" name="option" >Registered</option>
+            <option value="Waitlist" name="option">Waitlisted</option>
+          </select>
+          <br>
+          <br>
+          <label>Class Section:</label><br>
+          <input type="radio" name="CS 410P" id="undergrad" value="CS 410P"/> 
+          <label for="undergrad">CS 410P</label><br>
+          <input type="radio" name="CS 510P" id="grad" value="CS 510"/>
+          <label for="grad">CS 510</label> 
+          <br>
+          <br>
+          <label>Have you taken any of the following courses?</label><br>
+          <input type="checkbox" name="Programming Languages" id="PL"/>
+          <label for="PL">Programming Languages</label>
+           <br>
+          <input type="checkbox" name="Operating Systems" id="OS"/> 
+          <label for="OS">Operating Systems</label><br>
+          <input type="checkbox" name="Full Stack Web Development" id="FSD"/> 
+          <label for="FSD">Full Stack Web Development</label>
+          <br>
+          <br>
+          <label for="Anything else?" >Anything else?</label><br>
+          <textarea rows="10" id="Anything else?" cols="47" name="ANY"></textarea><br>
+          
+          <input type="submit" name="submit" value="Submit">
+          <input type="reset" name="reset" value="Reset">
+          <br>
+          <br>
+       
+      </form>
       </div>
-      
      
-    </form>
+    </header>
+    
     
   </body>
 </html>

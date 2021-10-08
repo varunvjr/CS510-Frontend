@@ -12,14 +12,15 @@ table{
     border-right: 1px solid black;
 }
 tr:hover{
-    background-color: lightblue;
+    background-color: rgba(137, 196, 244, 1);
 }
 td{
-    text-align:center;
     border-bottom: 1px solid black;
-    width: 10px;
+    text-align: left;
+    padding-left: 25px;
 }
 tr>th{
+    text-align: center;
     color: white;
     background-color: teal;
 }

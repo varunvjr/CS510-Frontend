@@ -2,29 +2,54 @@
 body{
     background-color: #0173a0;
 }
+form{
+    border-radius: 4.5px;
+}
+label{
+    margin-left: 2%;
+  
+}
 legend{
     font-size: 30px;
 }
 input[type="text"]{
-    width: 50em;
+    width: 25em;
+    margin-left:2%;
 }
 select{
-    width: 50em;
+    margin-left: 2%;
+    width: 25em;
 }
 input[type="email"]{
-    width: 50em;
+    width: 25em;
+    margin-left:2%;
 }
-input[type="submit"]{
-    width: 15em;
-    height: 2.5em;
+input:required:focus{
+    border:1px solid red;
+    outline: none;
+}
+textarea{
+    margin-left: 2%;
+    border-radius: 4.5px;
+}
+input[type="submit"]:hover{
     background-color: #0173a0;
     color: white;
+}
+input[type="reset"]:hover{
+    background-color: #0173a0;
+    color: white;
+}
+input[type="submit"]{
+    width: 13em;
+    margin-left: 2%;
+    height: 2.5em;
     font-weight: bold;
 }
 input[type='reset']{
-    width: 15em;
+    width: 13em;
+    margin-left: 2%;
     height: 2.5em;
-    
     font-weight: bold;
 }
 div{
@@ -35,7 +60,7 @@ span{
     color:#0173a0;
 }
 form{
-    width: 50%;
+    width: 400px;
     margin-left: 35%;
     align-content: center;
     background-color: white;
@@ -43,7 +68,7 @@ form{
 label{
     font-weight: bold;
 }
-legend{
+h1{
     text-align: center;
     font-weight: bold;
     color: #0173a0;
