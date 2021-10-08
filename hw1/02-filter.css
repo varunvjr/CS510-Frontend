@@ -1,1 +1,29 @@
 /* Add your code here */
+figure{
+    display: inline-block;
+    margin: 15px;
+}
+img{
+    width: 300px;
+}
+#grayscale>img{
+    filter:grayscale();
+}
+#blur>img{
+    filter: blur(5px);
+}
+#invert>img{
+    filter: invert();
+}
+#brightness>img{
+    filter: brightness(50%);
+}
+#saturation>img{
+    filter: saturate(3.0);
+}
+#sepia>img{
+    filter:sepia()
+}
+#other>img{
+    filter: grayscale() blur(5px);
+}

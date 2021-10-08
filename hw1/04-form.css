@@ -1,1 +1,50 @@
 /* Add your code here */
+body{
+    background-color: #0173a0;
+}
+legend{
+    font-size: 30px;
+}
+input[type="text"]{
+    width: 50em;
+}
+select{
+    width: 50em;
+}
+input[type="email"]{
+    width: 50em;
+}
+input[type="submit"]{
+    width: 15em;
+    height: 2.5em;
+    background-color: #0173a0;
+    color: white;
+    font-weight: bold;
+}
+input[type='reset']{
+    width: 15em;
+    height: 2.5em;
+    
+    font-weight: bold;
+}
+div{
+    padding: 40px;
+}
+span{
+    font-weight: 100;
+    color:#0173a0;
+}
+form{
+    width: 50%;
+    margin-left: 35%;
+    align-content: center;
+    background-color: white;
+}
+label{
+    font-weight: bold;
+}
+legend{
+    text-align: center;
+    font-weight: bold;
+    color: #0173a0;
+}

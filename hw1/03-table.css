@@ -3,4 +3,29 @@
     - rgb alpha value of the color above
 */
 
+table{
+    margin-left: 20%;
+    margin-top: 10%;
+    border-spacing: 0;
+    width: 40%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+tr:hover{
+    background-color: lightblue;
+}
+td{
+    text-align:center;
+    border-bottom: 1px solid black;
+    width: 10px;
+}
+tr>th{
+    color: white;
+    background-color: teal;
+}
+#heading{
+    background-color: teal;
+}
+
 /* Add your code here */
+
