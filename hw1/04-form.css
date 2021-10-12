@@ -2,9 +2,6 @@
 body{
     background-color: #0173a0;
 }
-form{
-    border-radius: 4.5px;
-}
 label{
     margin-left: 2%;
   
@@ -67,6 +64,7 @@ form{
 }
 label{
     font-weight: bold;
+    font-size: small;
 }
 h1{
     text-align: center;
