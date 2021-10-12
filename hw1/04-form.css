@@ -2,6 +2,9 @@
 body{
     background-color: #0173a0;
 }
+#bold{
+    font-weight: bold;
+}
 label{
     margin-left: 2%;
   
@@ -57,13 +60,13 @@ span{
     color:#0173a0;
 }
 form{
+    display: inline-block;
     width: 400px;
     margin-left: 35%;
     align-content: center;
     background-color: white;
 }
 label{
-    font-weight: bold;
     font-size: small;
 }
 h1{

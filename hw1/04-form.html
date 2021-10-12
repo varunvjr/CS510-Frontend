@@ -17,15 +17,15 @@
           <h1>INTRO SURVEY</h1>
           <br>
           <br>
-          <label for="name">Name <span>(required)</span></label><br>
+          <label id="bold" for="name">Name <span>(required)</span></label><br>
           <input type="text" id="name" name="Name" required/>
           <br>
           <br>
-          <label for="email">Email <span>(required)</span></label><br>
+          <label id="bold" for="email">Email <span>(required)</span></label><br>
           <input type="email" id="email" name="Email" required/>
           <br>
           <br>
-          <label for="option">Registration Status</label><br>
+          <label for="option" id="bold">Registration Status</label><br>
           <select name="option" id="option">
             <option value="Choose an Option" name="option" selected="selected">Choose an Option</option>
             <option value="Registered" name="option" >Registered</option>
@@ -33,14 +33,14 @@
           </select>
           <br>
           <br>
-          <label>Class Section:</label><br>
+          <label id="bold">Class Section:</label><br>
           <input type="radio" id="CS 410P" name="section" value="CS 410P">
           <label for="CS 410P">CS 410P</label><br>
           <input type="radio" id="CS 510" name="section" value="CS 510">
           <label for="CS 510">CS 510</label><br> 
           <br>
           <br>
-          <label>Have you taken any of the following courses?</label><br>
+          <label id="bold">Have you taken any of the following courses?</label><br>
           <input type="checkbox" name="Programming Languages" id="PL"/>
           <label for="PL">Programming Languages</label>
            <br>
@@ -50,7 +50,7 @@
           <label for="FSD">Full Stack Web Development</label>
           <br>
           <br>
-          <label for="Anything else?" >Anything else?</label><br>
+          <label id="bold" for="Anything else?" >Anything else?</label><br>
           <textarea rows="10" id="Anything else?" cols="47" name="ANY"></textarea><br>
           <input type="submit" name="submit" value="Submit">
           <input type="reset" name="reset" value="Reset">
