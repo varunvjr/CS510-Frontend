@@ -1,5 +1,29 @@
 /* Code for exercise 02-navbar */
-
+nav{
+    background-color:rgb(25, 59, 59);
+    height: 2.5em;
+    width: 100%;
+    flex-direction: row;
+    
+}
+li:hover{
+    background-color: teal;
+    height: 39px;
+    width:100px;
+}
+ul{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+#home:active{
+    background-color: red;
+}
 /* Code for exercise 03-flex */
 
 /* Code for exercise 04-grid */
