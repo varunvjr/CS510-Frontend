@@ -1,18 +1,60 @@
 /* Code for exercise 02-navbar */
+@media (min-width:100px) and (max-width:768px) {
+    
+    nav>ul{
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+     
+    }
+    a{
+        margin: auto;
+    }
+    body{
+        margin: 0px;
+    }
+    ul>li:not(.active):hover{
+        background-color: teal;
+        overflow: auto;
+        display: block;
+        flex-wrap: wrap;
+     
+    }
+    .active{
+        background-color: teal;
+        display: block;
+      
+    }
+    ul{
+        overflow: auto;
+        display: flex;
+        align-content: space-evenly;
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
 nav{
     background-color:rgb(25, 59, 59);
-    height: 2.5em;
-    width: 100%;
     flex-direction: row;
-    
+    overflow: auto;
 }
-li:hover{
+body{
+    margin: 0px;
+}
+ul>li:hover{
     background-color: teal;
-    height: 39px;
-    width:100px;
+    overflow: auto;
+    display: block;
+ 
+}
+.active{
+    background-color: teal;
+    padding: 10px;
 }
 ul{
-    padding-top: 10px;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -20,10 +62,12 @@ ul{
 a{
     text-decoration: none;
     color: #fff;
+    margin: auto;
 }
-#home:active{
-    background-color: red;
-}
+ li:not(.active){
+        padding: 10px;
+    }
+
 /* Code for exercise 03-flex */
 
 /* Code for exercise 04-grid */
