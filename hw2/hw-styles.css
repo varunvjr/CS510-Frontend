@@ -1,11 +1,9 @@
 /* Code for exercise 02-navbar */
 @media (min-width:100px) and (max-width:768px) {
     
-    nav>ul{
-        flex-wrap: wrap;
+    nav ul{
         align-items: center;
         flex-direction: column;
-     
     }
     a{
         margin: auto;
@@ -13,21 +11,14 @@
     body{
         margin: 0px;
     }
-    ul>li:not(.active):hover{
+    ul li a:hover{
         background-color: teal;
-        overflow: auto;
-        display: block;
-        flex-wrap: wrap;
-     
     }
     .active{
         background-color: teal;
-        display: block;
-      
     }
-    ul{
-        overflow: auto;
-        display: flex;
+    ul li{
+        width:100%;
         align-content: space-evenly;
         list-style-type: none;
     }
@@ -37,18 +28,15 @@
     }
 }
 nav{
-    background-color:rgb(25, 59, 59);
+    background: linear-gradient(0.25turn, #305353, var(--black));
     flex-direction: row;
     overflow: auto;
 }
 body{
     margin: 0px;
 }
-ul>li:hover{
-    background-color: teal;
-    overflow: auto;
-    display: block;
- 
+ul li a:hover{
+    background-color: teal; 
 }
 .active{
     background-color: teal;
@@ -64,14 +52,164 @@ a{
     color: #fff;
     margin: auto;
 }
+ul li{
+    text-align: center;
+    width: 20%;
+}
  li:not(.active){
         padding: 10px;
     }
 
 /* Code for exercise 03-flex */
+.flex-container{
+  margin-top: 20%;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap-reverse;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+.flex-container div{
+    padding: 10px;
+}
+
+.flex-item {
+    padding: 10;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 2.4em;
+    text-align: center;
+    width: 160px;
+    height: 80px;
+    margin: 10px;
+  }
+  
+
+
 
 /* Code for exercise 04-grid */
 
 /* Code for exercise 05-calendar */
+@media (min-width:200px) and (max-width:786px) {
+    .title{
+      
+        display: block;
+        background-color: black;
+        text-align: center;
+        font-size:large;
+        color: #fff;
+        height:5em ;
+    }
+    .grid-container1{
+        margin-top: 10%;
+        padding-left: 10%;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .days{
+        font-weight: bold;
+    }
+    .date{
+        text-align: center;
+        background-color: lightgray;
+        border: 1px solid white;
+        width: 50%;
+        height:100%
+    }
+    .grid-container{
+        display: grid;
+        align-content: center;
+        padding-left: 5%;
+        padding-top: 1px;
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap:5px;
+    
+    }
+    .date{
+        margin:1px;
+    }
+}
+.title{
+    padding-top: 30px;
+    display: block;
+    background-color: black;
+    text-align: center;
+    font-size:large;
+    color: #fff;
+    height:5em ;
+}
+.grid-container1{
+    margin-top: 10%;
+    padding-left: 10%;
+    display: grid;
+  
+    grid-template-columns: repeat(7,0.5fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.days{
+    font-weight: bold;
+    
+}
+.date{
+    
+    padding-top:5px;
+    text-align: center;
+    background-color: lightgray;
+    border: 1px solid white;
+    width: 55%;
+    height:150%
+}
+.grid-container{
+    display: grid;
+    justify-content: space-around;
+    padding-left: 5%;
+    padding-top: 1px;
+    grid-template-columns: repeat(7,0.251fr);
+    grid-template-rows: repeat(5,0.251fr);
+    row-gap: 25px;
+    column-gap: 1px;
 
+}
+.date{
+    margin:1px;
+    padding-left: 1px;
+}
 /* Code for exercise 06-bootstrap-grid */
+.row {
+    height: 100px;
+}
+
+[class*="col"]{
+    /* padding: 1rem; */
+    border: 2px solid #fff;
+}
+#p1,#p2{
+    background-color: purple;
+   
+}
+
+#n1,#n2,#n3{
+    background-color: navy;
+}
+
+#t1,#t2,#t3,#t4,#t5{
+    background-color: teal;
+}
+#l1{
+    background-color: green;
+}
+#l2{
+    background-color: green;
+}
+#l3{
+    background-color: green;
+}
+#l4{
+    background-color: green;
+}
+
