@@ -310,7 +310,7 @@ li:not(.active) {
     margin-right: 20%;
     display: grid;
     grid-template-columns: repeat(7, 3em);
-    grid-template-rows: repeat(5, 4em);
+    grid-template-rows: repeat(5, 3em);
   }
   .date {
     padding-top: 15px;
