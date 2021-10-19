@@ -65,6 +65,7 @@ li:not(.active) {
   display: flex;
   flex-flow: column-reverse wrap;
   height: 300px;
+  margin-left: 10px;
 }
 
 .flex-item.item1 {
@@ -107,7 +108,7 @@ li:not(.active) {
 
 
 .flex-item.item10 {
-    order: 999;
+    order: 700;
 }
 
 
@@ -263,6 +264,7 @@ li:not(.active) {
 }
 .date:nth-child(1),
 .date:nth-child(2),
+.date:nth-child(3),
 .date:nth-child(35) {
   padding-top: 20px;
   width: 70px;
@@ -322,6 +324,7 @@ li:not(.active) {
   }
   .date:nth-child(1),
   .date:nth-child(2),
+  .date:nth-child(3),
   .date:nth-child(35) {
     padding-top: 20px;
     width: 50px;
