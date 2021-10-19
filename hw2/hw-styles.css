@@ -1,70 +1,68 @@
 /* Code for exercise 02-navbar */
-@media (min-width: 100px) and (max-width: 768px) {
-  nav ul {
-    align-items: center;
-    flex-direction: column;
-  }
-  a {
-    margin: auto;
-  }
-  body {
-    margin: 0px;
-  }
-  ul li a:hover {
-    background-color: teal;
-  }
-  .active {
-    background-color: teal;
-  }
-  ul li {
-    width: 100%;
-    align-content: space-evenly;
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-}
-nav {
-  background: linear-gradient(0.25turn, #305353, var(--black));
-  flex-direction: row;
-  overflow: auto;
-}
-body {
-  margin: 0px;
-}
-ul li a:hover {
-  background-color: teal;
-}
-.active {
-  background-color: teal;
-  padding: 10px;
-}
+
 ul {
   display: flex;
+  flex-flow: row wrap;
+  background: linear-gradient(0.25turn, #305353, var(--black));
+  list-style: none;
   justify-content: space-evenly;
-  list-style-type: none;
+  margin: 0;
+  padding: 0%;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-  margin: auto;
-}
+
 ul li {
   text-align: center;
   width: 20%;
 }
-li:not(.active) {
-  padding: 10px;
+
+ul a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+
+body {
+  margin: 0px;
+}
+ul a:hover {
+  color: var(--white);
+  background: var(--teal);
+}
+li:nth-child(1){
+  color: var(--white);
+  background: var(--teal);
+}
+
+@media screen and (min-width: 1024px) {
+  ul {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    justify-content: space-around;
+    flex-flow: column wrap;
+  }
+
+  ul li {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 /* Code for exercise 03-flex */
 
 .flex-container {
   display: flex;
+  align-content: space-between;
   flex-flow: column-reverse wrap;
   height: 300px;
+  margin-left: 1%;
+  margin-right: 20%;
 }
 
 .flex-item.item1 {
@@ -107,8 +105,9 @@ li:not(.active) {
 
 
 .flex-item.item10 {
-    order: 999;
+    order: 700;
 }
+
 
 
 /* Code for exercise 04-grid */
@@ -227,66 +226,18 @@ li:not(.active) {
 }
 
 /* Code for exercise 05-calendar */
-@media (min-width: 100px) and (max-width: 768px) {
-  .title {
-    padding-top: 10px;
-    display: block;
-    background-color: black;
-    text-align: center;
-    color: #fff;
-    height: 5em;
-  }
 
-  .grid-container1 {
-    justify-content: center;
-    margin-top: 1.5%;
-    margin-right: 2.5%;
-    padding-left: 2.5%;
-    display: grid;
-    grid-template-columns: repeat(7, 1em);
-    grid-template-rows: repeat(1, 0.5em);
-  }
-  .days {
-    font-weight: bold;
-    align-content: center;
-    width: 5px;
-    height: 5px;
-  }
-  .date {
-    width: 2.5px;
-    height: 2.5px;
-    text-align: center;
-    background-color: lightgrey;
-    font-weight: bold;
-  }
-  .date:nth-child(1),
-  .date:nth-child(2),
-  .date:nth-child(35) {
-    padding-top: 10px;
-    width: 35px;
-    height: 35px;
-    border: 1px solid whitesmoke;
-    text-align: center;
-    background-color: white;
-    font-weight: bold;
-  }
-  .grid-container2 {
-    justify-content: center;
-    padding-left: 10%;
-    margin-right: 10%;
-    display: grid;
-    grid-template-columns: repeat(7, 1em);
-    grid-template-rows: repeat(5, 1em);
-  }
-}
 .title {
-  padding-top: 30px;
+  margin-top:2%;
+  margin-left: 25%;
+  margin-right:25%;
+  padding-top: 15px;
   display: block;
   background-color: black;
   text-align: center;
-  font-size: large;
+  font-size: 35px;
   color: #fff;
-  height: 5em;
+  height: 2em;
 }
 .grid-container1 {
   justify-content: center;
@@ -309,18 +260,19 @@ li:not(.active) {
   width: 70px;
   height: 70px;
   text-align: center;
-  background-color: lightgrey;
+  background-color: var(--gray3);
   font-weight: bold;
 }
 .date:nth-child(1),
 .date:nth-child(2),
+.date:nth-child(3),
 .date:nth-child(35) {
   padding-top: 20px;
   width: 70px;
   height: 70px;
   border: 1px solid whitesmoke;
   text-align: center;
-  background-color: white;
+  background-color: var(--white);
   font-weight: bold;
 }
 .grid-container2 {
@@ -334,6 +286,58 @@ li:not(.active) {
 .date:hover {
   color: red;
 }
+@media only screen and (max-width: 768px){
+  .title {
+    padding-top: 8px;
+    display: block;
+    margin-left: 24%;
+    margin-right: 24%;
+    background-color: black;
+    text-align: center;
+    font-size: 15px;
+    color: var(--white);
+    height: 2em;
+  }
+  
+  .grid-container1{
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 20%;
+  padding-left: 23%;
+  display: grid;
+  grid-template-columns: repeat(7, 2em);
+  grid-template-rows: repeat(1, 2em);
+  }
+  .grid-container2 {
+    justify-content: center;
+    padding-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-template-columns: repeat(7, 2em);
+    grid-template-rows: repeat(5, 2em);
+  }
+  .date {
+    padding-top: 7px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: var(--gray3);
+    font-weight: bold;
+  }
+  .date:nth-child(1),
+  .date:nth-child(2),
+  .date:nth-child(3),
+  .date:nth-child(35) {
+    padding-top: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--gray3);
+    text-align: center;
+    background-color: var(--white);
+    font-weight: bold;
+  }
+}
 /* Code for exercise 06-bootstrap-grid */
 .row {
   height: 100px;
@@ -345,13 +349,13 @@ li:not(.active) {
 }
 #p1,
 #p2 {
-  background-color: purple;
+  background-color: var(--purple);
 }
 
 #n1,
 #n2,
 #n3 {
-  background-color: navy;
+  background-color: var(--navy);
 }
 
 #t1,
@@ -359,17 +363,17 @@ li:not(.active) {
 #t3,
 #t4,
 #t5 {
-  background-color: teal;
+  background-color: var(--teal);
 }
 #l1 {
-  background-color: green;
+  background-color: var(--green);
 }
 #l2 {
-  background-color: green;
+  background-color: var(--green);
 }
 #l3 {
-  background-color: green;
+  background-color: var(--green);
 }
 #l4 {
-  background-color: green;
+  background-color: var(--green);
 }
