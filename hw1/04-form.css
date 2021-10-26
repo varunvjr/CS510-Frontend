@@ -41,13 +41,13 @@ input[type="reset"]:hover{
     color: white;
 }
 input[type="submit"]{
-    width: 17em;
+    width: 17.5em;
     margin-left: 2%;
     height: 2.5em;
     font-weight: bold;
 }
 input[type='reset']{
-    width: 17em;
+    width: 17.5em;
     margin-left: 1%;
     height: 2.5em;
     font-weight: bold;
