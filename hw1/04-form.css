@@ -13,15 +13,15 @@ legend{
     font-size: 30px;
 }
 input[type="text"]{
-    width: 25em;
+    width: 35em;
     margin-left:2%;
 }
 select{
     margin-left: 2%;
-    width: 25em;
+    width: 35em;
 }
 input[type="email"]{
-    width: 25em;
+    width: 35em;
     margin-left:2%;
 }
 input:required:focus{
@@ -41,19 +41,27 @@ input[type="reset"]:hover{
     color: white;
 }
 input[type="submit"]{
-    width: 13em;
+    width: 17em;
     margin-left: 2%;
     height: 2.5em;
     font-weight: bold;
 }
 input[type='reset']{
-    width: 13em;
-    margin-left: 2%;
+    width: 17em;
+    margin-left: 1%;
     height: 2.5em;
+    font-weight: bold;
+}
+legend{
+    font-size: medium;
     font-weight: bold;
 }
 div{
     padding: 40px;
+}
+fieldset {
+    border: 0;
+    margin-left: -2%;
 }
 span{
     font-weight: 100;
@@ -61,8 +69,8 @@ span{
 }
 form{
     display: inline-block;
-    width: 400px;
-    margin-left: 35%;
+    margin-left: 30%;
+    width: 500PX;
     align-content: center;
     background-color: white;
 }
@@ -73,4 +81,41 @@ h1{
     text-align: center;
     font-weight: bold;
     color: #0173a0;
+}
+@media (min-width:400px) and (max-width:786px){
+  h1{
+    font-size: 1em;
+  } 
+  .area{
+      width: 96%;
+  }
+  input[type="submit"] {
+    width: 14em;
+    margin-left: 2%;
+    height: 2.5em;
+    font-weight: bold;
+}
+input[type="reset"] {
+    width: 14em;
+    margin-left: 2%;
+    height: 2.5em;
+    font-weight: bold;
+}
+  legend {
+    font-size: 13px;
+    font-weight: bold;
+} /* Add your code here */
+form{
+    margin-left: 8%;
+    width: 400px;
+}
+input[type="text"] {
+    width: 29em;
+}
+input[type="email"]{
+    width: 29em;
+}
+select{
+    width: 29em;
+}
 }
