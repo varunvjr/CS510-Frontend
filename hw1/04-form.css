@@ -17,6 +17,7 @@ input[type="text"]{
     margin-left:2%;
 }
 select{
+    margin-top: 1%;
     margin-left: 2%;
     width: 35em;
 }
@@ -82,7 +83,7 @@ h1{
     font-weight: bold;
     color: #0173a0;
 }
-@media (min-width:400px) and (max-width:786px){
+@media (min-width:200px) and (max-width:786px){
   h1{
     font-size: 1em;
   } 
@@ -106,13 +107,14 @@ input[type="reset"] {
     font-weight: bold;
 } /* Add your code here */
 form{
-    margin-left: 8%;
+    margin-left: 3%;
     width: 400px;
 }
 input[type="text"] {
     width: 29em;
 }
 input[type="email"]{
+    margin-top: 1%;
     width: 29em;
 }
 select{
