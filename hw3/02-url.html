@@ -16,12 +16,20 @@
       <h1 class="mt-2 mb-4">String Manipulation</h1>
       <div class="form-group">
         <label for="comments">Enter a URL:</label>
-        <textarea class="form-control" id="comments" rows="1"> </textarea>
+        <textarea class="form-control" id="comments" rows="1" value="">
+        </textarea>
       </div>
       <div class="form-group mt-4">
         <input type="button" class="btn btn-info" value="Parse URL" />
         <input type="reset" class="btn btn-secondary" value="Reset" />
       </div>
     </form>
+    <br />
+    <div id="output">
+      <h5 style="margin-left: 2%" id="result"></h5>
+      <h5 style="margin-left: 2%" id="pathName"></h5>
+      <p style="margin-left: 2%" id="pathValue"></p>
+      <h5 style="margin-left: 2%" id="queryParameters"></h5>
+    </div>
   </body>
 </html>
