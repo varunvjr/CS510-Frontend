@@ -12,10 +12,14 @@ word.addEventListener("input",(e)=>{
     let paragraph=document.getElementById("intro").innerText;
     if(ul>=1){
     let re = new RegExp(key,'g'); // search for all instances
-		let newText = paragraph.replace(re,`<mark>${key}</mark>`);
+		let newText = paragraph.replace(re,`<mark style="background:yellow;">${key}</mark>`);
 		document.getElementById("intro").innerHTML = newText;
     }else{
-
+        const mark=document.querySelectorAll("mark");
+        for(let i=0;i<mark.length;i++){
+            mark[i].style.background="white";
+        }
+       
     }
 
     // console.log(paragraph);
