@@ -5,56 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Form Exercise</title>
-    <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" href="../hw1/04-form.css"/>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../hw1/04-form.css" />
     <script defer src="01-form.js"></script>
   </head>
   <body class="bg-dark text-dark">
     <main>
       <h1>Contact Form</h1>
       <form action="" id="form">
-          <h1>CONTACT FORM</h1>
-          <br>
-          <label id="bold" for="name">Name <span>(required)</span></label><br>
-          <input type="text" id="name" name="Name" required/>
-          <br>
-          <label id="bold" for="email">Email <span>(required)</span></label><br>
-          <input type="email" id="email" name="Email" required/>
-          <br>
-          <label for="option" id="bold">Registration Status</label><br>
-          <select name="option" id="option">
-            <option value="Choose an Option" name="option" selected="selected">Choose an Option</option>
-            <option value="Registered" name="option" >Registered</option>
-            <option value="Waitlist" name="option">Waitlisted</option>
-          </select>
-        <br>
-        <br>
-          <fieldset>
-            <legend>Class Section:</legend>
-            <input type="radio" id="CS 410P" name="section" value="CS 410P">
-            <label for="CS 410P">CS 410P</label><br>
-            <input type="radio" id="CS 510" name="section" value="CS 510">
-            <label for="CS 510">CS 510</label><br> 
-          </fieldset>
-          <fieldset>
-            <legend>Have you taken any of the following courses?</legend>
-            <input type="checkbox" name="course" value="Programming Languages" id="PL"/>
-            <label for="PL">Programming Languages</label>
-             <br>
-            <input type="checkbox" name="course" value="Operating Systems" id="OS"/> 
-            <label for="OS">Operating Systems</label><br>
-            <input type="checkbox" name="course" value="Full Stack Web Development" id="FSD"/> 
-            <label for="FSD">Full Stack Web Development</label>
-            <br>
-          </fieldset>
-          <label id="bold" for="Anything else?" >Anything else?</label><br>
-          <textarea rows="10" id="Anything else?" class="area" cols="62" name="ANY"></textarea><br>
-          <input type="submit" name="submit" value="Submit">
-          <input type="reset" name="reset" value="Reset">
-          <br>
-          <br>
-       
-
+        <h1>CONTACT FORM</h1>
+        <br />
+        <label id="bold" for="name">Name <span>(required)</span></label
+        ><br />
+        <input type="text" id="name" name="Name" required />
+        <br />
+        <label id="bold" for="email">Email <span>(required)</span></label
+        ><br />
+        <input type="email" id="email" name="Email" required />
+        <br />
+        <label for="option" id="bold">Registration Status</label><br />
+        <select name="option" id="option">
+          <option value="Choose an Option" name="option" selected="selected">
+            Choose an Option
+          </option>
+          <option value="Registered" name="option">Registered</option>
+          <option value="Waitlist" name="option">Waitlisted</option>
+        </select>
+        <br />
+        <br />
+        <fieldset>
+          <legend>Class Section:</legend>
+          <input type="radio" id="CS 410P" name="section" value="CS 410P" />
+          <label for="CS 410P">CS 410P</label><br />
+          <input type="radio" id="CS 510" name="section" value="CS 510" />
+          <label for="CS 510">CS 510</label><br />
+        </fieldset>
+        <fieldset>
+          <legend>Have you taken any of the following courses?</legend>
+          <input
+            type="checkbox"
+            name="course"
+            value="Programming Languages"
+            id="PL"
+          />
+          <label for="PL">Programming Languages</label>
+          <br />
+          <input
+            type="checkbox"
+            name="course"
+            value="Operating Systems"
+            id="OS"
+          />
+          <label for="OS">Operating Systems</label><br />
+          <input
+            type="checkbox"
+            name="course"
+            value="Full Stack Web Development"
+            id="FSD"
+          />
+          <label for="FSD">Full Stack Web Development</label>
+          <br />
+        </fieldset>
+        <label id="bold" for="Anything else?">Anything else?</label><br />
+        <textarea
+          rows="10"
+          id="Anything else?"
+          class="area"
+          cols="62"
+          name="ANY"
+        ></textarea
+        ><br />
+        <input type="submit" name="submit" value="Submit" />
+        <input type="reset" name="reset" value="Reset" />
+        <br />
+        <br />
       </form>
     </main>
   </body>

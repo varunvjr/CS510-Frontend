@@ -45,8 +45,6 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-console.log("Enter your code here");
-
 // Test Input #1:
 // http://www.example.com
 
