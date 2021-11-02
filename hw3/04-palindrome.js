@@ -5,9 +5,9 @@ var num = document.getElementById("number");
 num.addEventListener("change", (e) => {
   var n1 = num.value;
   var n2 = parseInt(n1);
-  if(isNaN(n2)){
+  if (isNaN(n2)) {
     document.getElementById("result").innerText = "Please enter a number";
-    document.getElementById("result").style.color="red";
+    document.getElementById("result").style.color = "red";
   }
   var rev = 0;
 
@@ -20,10 +20,10 @@ num.addEventListener("change", (e) => {
 
   if (rev == n1) {
     document.getElementById("result").innerText = "Yes. This is a palindrome!";
-    document.getElementById("result").style.color="green";
+    document.getElementById("result").style.color = "green";
   } else {
     document.getElementById("result").innerText = "No. Try again";
-    document.getElementById("result").style.color="red";
+    document.getElementById("result").style.color = "red";
   }
   e.preventDefault();
 });

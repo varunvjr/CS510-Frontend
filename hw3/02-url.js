@@ -29,7 +29,7 @@ btn.addEventListener("click", (e) => {
       pathValue.innerText = urs;
       const s1 = url.substring(qp + 1);
       console.log("parameters", s1);
-      const s2 = s1.replace("=", " : ");
+      const s2 = s1.replaceAll("=", " : ");
       const parameter = s2.split("&");
       console.log("url string: ", urs);
       for (let i = 0; i < parameter.length; i++) {
