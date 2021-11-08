@@ -13,10 +13,15 @@ fetch(url)
 function printCharacters(actor){
     actor.map(act=>{
         const div=document.createElement("div");
-        const p=document.createElement("p");
-        p.innerText=act.fullName;
-        div.innerHTML="<img src="+act.imageUrl+" alt="+act.image+"/>"+act.fullName+ "";
+        const p=document.createElement("h5");
+        const p1=document.createElement("h3");
+        p1.innerText=act.fullName;
+        p.innerText=act.title;
+        div.innerHTML="<img src="+act.imageUrl+" alt="+act.image+`/>`;
+        div.appendChild(p1);
+        div.appendChild(p);
         document.querySelector(".characters").appendChild(div);
+       
 
         console.log("Name: ",act.imageUrl);
     })

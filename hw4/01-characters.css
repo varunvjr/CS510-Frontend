@@ -5,18 +5,28 @@ body {
 h1 {
   text-align: center;
 }
+h3{
+  text-align: center;
+}
+h5{
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+  margin-top: 0.1%;
+}
 
 div{
   width: 250px;
-  height:250px;
-  margin: 1%;
+  height:400px;
+  margin:0.5%;
 }
 div:hover{
-  background-color:red;
+  background-color:darkblue;
+  color: white;
 }
 img{
   width:100%;
-  height: 100%;
+  height: 60%;
 }
 
 .characters {
