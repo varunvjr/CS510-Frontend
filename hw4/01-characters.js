@@ -21,9 +21,6 @@ function printCharacters(actor){
         div.appendChild(p1);
         div.appendChild(p);
         document.querySelector(".characters").appendChild(div);
-       
-
-        console.log("Name: ",act.imageUrl);
     })
 }
 

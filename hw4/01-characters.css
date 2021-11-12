@@ -21,15 +21,18 @@ div{
   margin:0.5%;
 }
 div:hover{
-  background-color:darkblue;
+  background-color:var(--teal);
   color: white;
 }
 img{
-  width:100%;
+  width:90%;
   height: 60%;
+  margin: 5%;
+  align-content: center;
 }
 
 .characters {
+  margin-left: 3%;
   display: flex;
   flex-flow: row wrap;
   justify-content:left;
