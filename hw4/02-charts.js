@@ -27,7 +27,7 @@ let borderColors = [
   'rgba(210, 199, 199, 1)',
   'rgba(78, 52, 199, 1)',
 ];
-
+let noneValue=0;
 // URL to Game of Thrones API to fetch all characters
 let url = 'https://thronesapi.com/api/v2/Characters';
 let characterArray=[];
@@ -37,7 +37,6 @@ function storeFamilyNames(data){
   data.map((fa)=>{
     let houseName=fa.family.split(" ");
     let house=houseName[houseName.length-1];
-    console.log("House :",house);
     if(myGot.has(house) ){
       let value=myGot.get(house);
       value+=1;
@@ -51,48 +50,64 @@ function storeFamilyNames(data){
   if(idx>-1){
     families.splice(idx,1);
   }
+
   let val=myGot.get("Lanister");
-  console.log("Lanister valie",val);
   val+=myGot.get("Lannister");
   myGot.set("Lannister",val);
   myGot.delete("Lanister");
-  console.log("got....",myGot);
-  console.log("Hello",families);
+ 
   families.map((fam)=>{
     if(myGot.get(fam)<2){
+      noneValue++;
       myGot.delete(fam);
     }
   })
-  console.log("Got family after changes",myGot);
-  console.log("got key",myGot.keys())
-  console.log("got values",myGot.values())
+
   myGot.forEach((val,key) => {
     newFa.push(key);
     newVa.push(val);
   });
-  console.log("Fam",newFa);
-  console.log("FamVal",newVa);
+ 
 }
-fetch(url)
-    .then(res=>res.json())
-    .then(data=>{
-        characterArray=[...characterArray,data];
-        console.log(characterArray[0]);
-        storeFamilyNames(characterArray[0]);
-        console.log("ffff",newFa);
-        console.log("vvvvvvvv",newVa)
-        newFa.map((f)=>{
-          let s="House "+f;
-          modifiedFamilies.push(s);
-        })
-        renderChart();
+async function getData(){
+  try{
+    const res=await fetch(url);
+    const data=await res.json();
+    characterArray=[...characterArray,data];
+    console.log(characterArray[0]);
+    storeFamilyNames(characterArray[0]);
+    console.log("None value",noneValue);
+    newFa.map((f)=>{
+      let s="House "+f;
+      modifiedFamilies.push(s);
     })
-    .catch(err=>{console.log("Error",err)})
+    modifiedFamilies.push("None");
+    newVa.push(noneValue);
+    renderChart();
+  }catch(err){
+    console.log(err);
+  }
+}
+
 let renderChart = () => {
   let donutChart = document.getElementById('donut-chart');
 
   new Chart(donutChart, {
     type: 'doughnut',
+    options: {
+      title: {
+        display: true,
+        text: 'Exercise 02 - Charts',
+        fontSize: '40',
+        fontStyle: 'bold',
+        fontColor: 'black',
+        lineHeight: '1.5'
+    },
+      legend: {
+        display: true,
+        position: 'bottom'
+      }
+    },
     data: {
       labels:modifiedFamilies,
       datasets: [
@@ -108,4 +123,4 @@ let renderChart = () => {
   });
 };
 
-
+getData();
