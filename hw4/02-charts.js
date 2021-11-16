@@ -57,12 +57,20 @@ function storeFamilyNames(data){
   myGot.delete("Lanister");
  
   families.map((fam)=>{
-    if(myGot.get(fam)<2){
+  
+    if(fam=="Unknown"||fam=="None"||fam==""){
       noneValue++;
       myGot.delete(fam);
     }
+   
   })
-
+  console.log("Families",myGot.keys());
+  console.log(families);
+  families.map((fa)=>{
+    if(myGot.get(fa)<2){
+      myGot.delete(fa);
+    }
+  })
   myGot.forEach((val,key) => {
     newFa.push(key);
     newVa.push(val);

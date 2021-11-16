@@ -11,8 +11,8 @@ const Details = () => {
         <div>
             <h1>Welcome to Character detail page</h1><br/>
             <img src={chData.imageUrl} alt={chData.image} width="300px" height="400px"/>
-            <h1>Character Details</h1>
-            <h2>Family: {chData.family}</h2>
+            <h3>Character Details</h3>
+            <h3 className="h3">Family: {chData.family}</h3>
             <h2>Full Name: {chData.fullName}</h2>
         </div>
     )

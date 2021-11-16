@@ -2,7 +2,8 @@ import React from 'react'
 import { Doughnut } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import axios from 'axios';
-
+import "./charts.css";
+import "./App.css";
 
 let newVa=[];
 let modifiedFamilies=[];
@@ -39,9 +40,15 @@ const Houses = () => {
          
           // eslint-disable-next-line array-callback-return
           families.map(fam=>{
-            if(myGot.get(fam)<2){
+            if(fam==="Unknown"||fam==="None"||fam===""){
               noneValue++;
               myGot.delete(fam);
+            }
+          })
+          // eslint-disable-next-line array-callback-return
+          families.map((fa)=>{
+            if(myGot.get(fa)<2){
+              myGot.delete(fa);
             }
           })
         
@@ -56,8 +63,7 @@ const Houses = () => {
           })
           modifiedFamilies.push("None");
           newVa.push(noneValue);
-          console.log("Modified families",modifiedFamilies);
-          console.log("values",newVa)
+         
     }
     useEffect(()=>{
         const getData=async()=>{
@@ -105,9 +111,12 @@ const Houses = () => {
         ],
       };
     return (
-        <div>
-        Welcome to houses page
-        <Doughnut data={data}/>
+        <div className="container">
+        <h1 className="h1">Welcome to houses page</h1>
+        <main className="wrapper container border rounded bg-light w-75 mt-5">
+        <Doughnut id="donut-chart" aria-label="donut chart" role="img" data={data}/>
+        </main>
+  
            
         </div>
     )

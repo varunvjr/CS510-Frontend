@@ -55,16 +55,19 @@ const Search = () => {
     console.log("List:  ",list);
     return (
         <div>
-            <label>Enter the Character Name: </label>
+            <h3>Enter the Character Name: </h3>
             <Container>
             <input
+            style={{width:"30%",
+                    height:"35px"
+            }}
             name="character"
             type="text"
             placeholder="Enter the Character Name"
             value={character}
             onChange={(e)=>{setCharacter(e.target.value)}}
             />
-        <Button  onClick={submitHandler} className="btn btn-primary">Search</Button>
+        <Button style={{marginLeft:"10px"}} onClick={submitHandler} className="btn btn-primary">Search</Button>
         </Container>
            
             
