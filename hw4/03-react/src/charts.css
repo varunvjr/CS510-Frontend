@@ -15,7 +15,6 @@ h1 {
   padding: 2rem;
   border-radius: 0.8rem;
   background-color: var(--white);
-  
 }
 
 @media (max-width: 768px) {
