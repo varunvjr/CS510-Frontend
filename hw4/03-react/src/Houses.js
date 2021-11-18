@@ -1,6 +1,6 @@
 import React from 'react'
 import { Doughnut } from 'react-chartjs-2';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./charts.css";
 import "./App.css";
@@ -9,8 +9,19 @@ let newVa=[];
 let modifiedFamilies=[];
 
 const Houses = () => {
+    const [charData, setCharData] = useState({});
     let newFa=[];
     let noneValue=0;
+      useEffect(()=>{
+            const getData=async()=>{
+                const {data}=await axios.get("https://thronesapi.com/api/v2/Characters")
+                storeData(data);
+            }
+            modifiedFamilies=[];
+            newVa=[];
+            getData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [])
     const storeData=(data)=>{
         let myGot=new Map([])
         let families=[];
@@ -63,18 +74,11 @@ const Houses = () => {
           })
           modifiedFamilies.push("None");
           newVa.push(noneValue);
-         
+          renderChartData();
     }
-    useEffect(()=>{
-        const getData=async()=>{
-            const {data}=await axios.get("https://thronesapi.com/api/v2/Characters")
-            storeData(data);
-        }
-        modifiedFamilies=[];
-        newVa=[];
-        getData();
-    })
-    const data = {
+
+    const renderChartData = () => {
+      const data = {
         labels: modifiedFamilies,
         datasets: [
           {
@@ -110,11 +114,30 @@ const Houses = () => {
           },
         ],
       };
+      
+      setCharData(data)
+    }
+    
+    const options= {
+      title: {
+        display: true,
+        text: 'Exercise 02 - Charts',
+        fontSize: '40',
+        fontStyle: 'bold',
+        fontColor: 'black',
+        lineHeight: '1.5'
+    },
+      legend: {
+        display: true,
+        position: 'bottom'
+      }
+    }
+    
     return (
         <div className="container">
         <h1 className="h1">Welcome to houses page</h1>
         <main className="wrapper container border rounded bg-light w-75 mt-5">
-        <Doughnut id="donut-chart" aria-label="donut chart" role="img" data={data}/>
+        <Doughnut id="donut-chart" aria-label="donut chart" role="img" data={charData} options={options}/>
         </main>
   
            

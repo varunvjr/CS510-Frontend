@@ -24,9 +24,13 @@ h1 {
     height: 100vh;
   }
 }
-
 @media (max-width: 414px) {
   .wrapper {
     width: 96vw;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  main {
+    background-color: lightblue;
   }
 }

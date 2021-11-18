@@ -36,7 +36,6 @@ function App() {
               </NavItem>
             </Nav>
           </Container>
-          <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/search" component={Search} />
           <Route path="/houses" component={Houses} />

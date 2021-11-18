@@ -5,27 +5,27 @@ body {
 h1 {
   text-align: center;
 }
-h3{
+h3 {
   text-align: center;
 }
-h5{
+h5 {
   font-weight: bold;
   text-align: center;
   font-size: large;
   margin-top: 0.1%;
 }
 
-div{
+div {
   width: 250px;
-  height:400px;
-  margin:0.5%;
+  height: 400px;
+  margin: 0.5%;
 }
-div:hover{
-  background-color:var(--teal);
+div:hover {
+  background-color: var(--teal);
   color: white;
 }
-img{
-  width:90%;
+img {
+  width: 90%;
   height: 60%;
   margin: 5%;
   align-content: center;
@@ -35,5 +35,5 @@ img{
   margin-left: 3%;
   display: flex;
   flex-flow: row wrap;
-  justify-content:left;
+  justify-content: left;
 }
